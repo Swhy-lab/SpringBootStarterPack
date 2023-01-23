@@ -8,23 +8,8 @@
 	jcl-over-slf4j
 
  -->
-<!--
-	기능적 고려
-	1. 스캔 여부 결정
-	2. 콘솔 타입 패턴 결정
-	3. 파일 타입 패턴 결정
-	4. 상세 옵션 시간기반, 파일크기 기반 분산 저장
-
- -->
 
 <!--
-수준
-ERROR : 알림
-WARN : 주의
-INFO : 기타정보
-DEBUG : 디버깅정보
-TRACE : 추적용
-
 TRACE - TRACE, DEBUG, INFO, WARN, ERROR
 DEBUG - DEBUG, INFO, WARN, ERROR
 INFO - INFO, WARN, ERROR(개발 추천)
