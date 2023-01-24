@@ -1,12 +1,14 @@
 spring:
-#  jpa:
-#    database-platform: com.example.springbootstarterpack.configuration.SQLDialect
-#    hibernate:
-#      ddl-auto: update
-#    properties:
-#      hibernate:
-#        format_sql: true #To beautify or pretty print the SQL
-#        show_sql: true #show sql
+  jpa:
+    #naming:
+      #physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: configuration.SQLiteDialect #문법차이설정
+        format_sql: true #Pretty print
+        show_sql: true #show sql
   datasource:
     url: jdbc:sqlite:${storage_home}/boot.db
     username: racoon
@@ -30,7 +32,7 @@ mybatis:
 #Slf4j
 logging:
   config: classpath:logback-config.xml
-#  level:
-#    org.hibernate:
-#      type.descriptor.sql: trace #show parameter binding
-#      SQL: DEBUG
+  level:
+    org.hibernate:
+      type.descriptor.sql: trace #show parameter binding
+      SQL: DEBUG
