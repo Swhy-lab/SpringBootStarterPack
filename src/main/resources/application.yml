@@ -1,9 +1,17 @@
 spring:
+#  jpa:
+#    database-platform: com.example.springbootstarterpack.configuration.SQLDialect
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        format_sql: true #To beautify or pretty print the SQL
+#        show_sql: true #show sql
   datasource:
     url: jdbc:sqlite:${storage_home}/boot.db
     username: racoon
     password: ""
-    driver-class-name: org.sqlite.JDBC
+    driverClassName: org.sqlite.JDBC
     hikari:
       maximum-pool-size: 10
       connection-timeout: 5000
@@ -22,4 +30,7 @@ mybatis:
 #Slf4j
 logging:
   config: classpath:logback-config.xml
-
+#  level:
+#    org.hibernate:
+#      type.descriptor.sql: trace #show parameter binding
+#      SQL: DEBUG
