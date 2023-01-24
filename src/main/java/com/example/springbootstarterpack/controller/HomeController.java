@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @Controller
-@RequiredArgsConstructor
 public class HomeController {
 
     @Autowired
